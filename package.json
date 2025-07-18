@@ -5,7 +5,7 @@
   "version": "3.4.9",
   "description": "uni-app 框架示例，一套代码，同时发行到iOS、Android、H5、小程序等多个平台，请使用手机扫码快速体验 uni-app 的强大功能",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite"
   },
   "repository": "https://github.com/wine1/uniScheduleGenie.git",
   "keywords": [
@@ -13,7 +13,7 @@
     "uni-app",
     "uni-ui",
     "示例工程"
-],
+  ],
   "author": "",
   "license": "MIT",
   "bugs": {

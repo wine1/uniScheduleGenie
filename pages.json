@@ -14,6 +14,56 @@
 	"pages": [
 		// pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+			"path": "pages/tabBar/Home/home",
+			"style": {
+				"navigationBarTitleText": "scheduleGenie",
+				"app-plus": {
+					"bounce": "vertical",
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue534",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px",
+							"color": "#FFFFFF"
+						}]
+					}
+				}
+			}
+		}, {
+			"path": "pages/tabBar/Chat/chat",
+			"style": {
+				"navigationBarTitleText": "chat",
+				"app-plus": {
+					"bounce": "vertical",
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue534",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px",
+							"color": "#FFFFFF"
+						}]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/tabBar/Mine/mine",
+			"style": {
+				"navigationBarTitleText": "mine",
+				"app-plus": {
+					"bounce": "vertical",
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue534",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px",
+							"color": "#FFFFFF"
+						}]
+					}
+				}
+			}
+		},
+		{
 			"path": "pages/tabBar/component/component",
 			"style": {
 				"navigationBarTitleText": "内置组件",
@@ -204,9 +254,9 @@
 				"navigationBarTitleText": "editor",
 				"app-plus": {
 					"softinputMode": "adjustResize"
-				}
+				},
 				// #ifdef MP-BAIDU
-				,"usingComponents": {
+				"usingComponents": {
 					"editor": "dynamicLib://editorLib/editor"
 				}
 				// #endif
@@ -334,17 +384,17 @@
 			"style": {
 				"navigationBarTitleText": "问题反馈"
 			}
-		}
+		},
 		// #ifdef H5
-		, {
+		{
 			"path": "pages/error/404",
 			"style": {
 				"navigationBarTitleText": "Not Found"
 			}
-		}
+		},
 		// #endif
 		// #ifdef APP-PLUS
-		,{
+		{
 			"path": "uni_modules/uni-upgrade-center-app/pages/upgrade-popup",
 			"style": {
 				"app-plus": {
@@ -360,8 +410,7 @@
 			}
 		}
 		// #endif
-
-],
+	],
 	"subPackages": [{
 			"root": "pages/API",
 			"pages": [{
@@ -377,33 +426,36 @@
 						"navigationBarTitleText": "原生子窗体",
 						"app-plus": {
 							"subNVues": [{
-								"id": "drawer",
-								"path": "subnvue/subnvue/drawer",
-								"type": "popup",
-								"style": {
-									"width": "50%"
+									"id": "drawer",
+									"path": "subnvue/subnvue/drawer",
+									"type": "popup",
+									"style": {
+										"width": "50%"
+									}
+								},
+								{
+									"id": "popup",
+									"path": "subnvue/subnvue/popup",
+									"type": "popup",
+									"style": {
+										"margin": "auto",
+										"width": "80%",
+										"height": "600rpx"
+									}
+								},
+								{
+									"id": "video_mask",
+									"path": "subnvue/subnvue/video-mask",
+									"style": {
+										"position": "absolute",
+										"bottom": "30px",
+										"left": "0",
+										"width": "230px",
+										"height": "110px",
+										"background": "transparent"
+									}
 								}
-							}, {
-								"id": "popup",
-								"path": "subnvue/subnvue/popup",
-								"type": "popup",
-								"style": {
-									"margin": "auto",
-									"width": "80%",
-									"height": "600rpx"
-								}
-							}, {
-								"id": "video_mask",
-								"path": "subnvue/subnvue/video-mask",
-								"style": {
-									"position": "absolute",
-									"bottom": "30px",
-									"left": "0",
-									"width": "230px",
-									"height": "110px",
-									"background": "transparent"
-								}
-							}]
+							]
 						}
 					}
 				},
@@ -1329,10 +1381,9 @@
 				// #endif
 				// #ifdef APP || H5
 				{
-					"path" : "renderjs/renderjs",
-					"style" :
-					{
-						"navigationBarTitleText" : "renderjs"
+					"path": "renderjs/renderjs",
+					"style": {
+						"navigationBarTitleText": "renderjs"
 					}
 				},
 				// #endif
@@ -1344,34 +1395,30 @@
 				},
 				// #ifdef VUE3
 				{
-					"path" : "pinia/pinia",
-					"style" :
-					{
-						"navigationBarTitleText" : "pinia"
+					"path": "pinia/pinia",
+					"style": {
+						"navigationBarTitleText": "pinia"
 					}
 				},
 				// #endif
 				// #ifdef APP
 				{
-					"path" : "vuex-nvue/vuex-nvue",
-					"style" :
-					{
-						"navigationBarTitleText" : "vuex-nvue"
+					"path": "vuex-nvue/vuex-nvue",
+					"style": {
+						"navigationBarTitleText": "vuex-nvue"
 					}
 				},
 				// #endif
 				{
-					"path" : "vuex-vue/vuex-vue",
-					"style" :
-					{
-						"navigationBarTitleText" : "vuex-vue"
+					"path": "vuex-vue/vuex-vue",
+					"style": {
+						"navigationBarTitleText": "vuex-vue"
 					}
 				},
 				{
-					"path" : "crypto-api/crypto-api",
-					"style" :
-					{
-						"navigationBarTitleText" : "crypto"
+					"path": "crypto-api/crypto-api",
+					"style": {
+						"navigationBarTitleText": "crypto"
 					}
 				}
 			]
@@ -1400,27 +1447,47 @@
 		"borderStyle": "black",
 		"backgroundColor": "#F8F8F8",
 		"list": [{
-				"pagePath": "pages/tabBar/component/component",
+				"pagePath": "pages/tabBar/Home/home",
 				"iconPath": "static/component.png",
 				"selectedIconPath": "static/componentHL.png",
-				"text": "内置组件"
+				"text": "scheduleGenie"
 			},
 			{
-				"pagePath": "pages/tabBar/API/API",
-				"iconPath": "static/api.png",
-				"selectedIconPath": "static/apiHL.png",
-				"text": "接口"
-			}, {
-				"pagePath": "pages/tabBar/extUI/extUI",
-				"iconPath": "static/extui.png",
-				"selectedIconPath": "static/extuiHL.png",
-				"text": "扩展组件"
-			}, {
-				"pagePath": "pages/tabBar/template/template",
-				"iconPath": "static/template.png",
-				"selectedIconPath": "static/templateHL.png",
-				"text": "模板"
+				"pagePath": "pages/tabBar/Chat/chat",
+				"iconPath": "static/component.png",
+				"selectedIconPath": "static/componentHL.png",
+				"text": "chat"
+			},
+			{
+				"pagePath": "pages/tabBar/Mine/mine",
+				"iconPath": "static/component.png",
+				"selectedIconPath": "static/componentHL.png",
+				"text": "mine"
 			}
+			// {
+			//   "pagePath": "pages/tabBar/component/component",
+			//   "iconPath": "static/component.png",
+			//   "selectedIconPath": "static/componentHL.png",
+			//   "text": "内置组件"
+			// },
+			// {
+			//   "pagePath": "pages/tabBar/API/API",
+			//   "iconPath": "static/api.png",
+			//   "selectedIconPath": "static/apiHL.png",
+			//   "text": "接口"
+			// },
+			// {
+			//   "pagePath": "pages/tabBar/extUI/extUI",
+			//   "iconPath": "static/extui.png",
+			//   "selectedIconPath": "static/extuiHL.png",
+			//   "text": "扩展组件"
+			// },
+			// {
+			//   "pagePath": "pages/tabBar/template/template",
+			//   "iconPath": "static/template.png",
+			//   "selectedIconPath": "static/templateHL.png",
+			//   "text": "模板"
+			// }
 		]
 	}
 }
